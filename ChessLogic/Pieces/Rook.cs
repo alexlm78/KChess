@@ -3,6 +3,13 @@
 public class Rook : Piece {
     public override PieceType Type => PieceType.Rook;
     public override Player Color { get; }
+
+    private static readonly Direction[] dirs = {
+        Direction.North,
+        Direction.East,
+        Direction.South,
+        Direction.West
+    };
         
     public Rook(Player color) {
         Color = color;
@@ -14,5 +21,10 @@ public class Rook : Piece {
         };
         
         return copy;
+    }
+
+    public override IEnumerable<Move> GetMoves(Position fromPos, Board board) {
+        return MovePositionsInDirs(fromPos, board, dirs)
+            .Select(toPos => new NormalMove(fromPos, toPos));
     }
 }
