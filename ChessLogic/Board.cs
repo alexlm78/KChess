@@ -1,13 +1,11 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace ChessLogic;
+﻿namespace ChessLogic;
 
 public class Board {
     private readonly Piece[,] pieces = new Piece[8, 8];
 
     public Piece this[int r, int c] {
-        get => pieces[r, c];
-        set => pieces[r, c] = value;
+        get { return pieces[r, c]; }
+        set { pieces[r, c] = value; }
     }
 
     public Piece this[Position pos] {

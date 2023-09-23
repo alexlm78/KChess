@@ -28,7 +28,7 @@ public class Pawn : Piece {
     }
 
     private bool CanCaptureAt(Position pos, Board board) {
-        if ( Board.IsInside(pos) || board.IsEmpty(pos) )
+        if ( !Board.IsInside(pos) || board.IsEmpty(pos) )
             return false;
 
         return board[pos].Color != Color;

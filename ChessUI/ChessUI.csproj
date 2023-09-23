@@ -9,16 +9,16 @@
 
   <ItemGroup>
     <None Remove="Assets\BlackBishop.png" />
+    <None Remove="Assets\BlackCursor.cur" />
     <None Remove="Assets\BlackKing.png" />
     <None Remove="Assets\BlackKnight.png" />
     <None Remove="Assets\BlackPawn.png" />
     <None Remove="Assets\BlackQueen.png" />
     <None Remove="Assets\BlackRook.png" />
     <None Remove="Assets\Board.png" />
-    <None Remove="Assets\CursorB.cur" />
-    <None Remove="Assets\CursorW.cur" />
     <None Remove="Assets\icon.ico" />
     <None Remove="Assets\WhiteBishop.png" />
+    <None Remove="Assets\WhiteCursor.cur" />
     <None Remove="Assets\WhiteKing.png" />
     <None Remove="Assets\WhiteKnight.png" />
     <None Remove="Assets\WhitePawn.png" />
@@ -34,8 +34,8 @@
     <Resource Include="Assets\BlackBishop.png" />
     <Resource Include="Assets\WhiteBishop.png" />
     <Resource Include="Assets\Board.png" />
-    <Resource Include="Assets\CursorB.cur" />
-    <Resource Include="Assets\CursorW.cur" />
+    <Resource Include="Assets\BlackCursor.cur" />
+    <Resource Include="Assets\WhiteCursor.cur" />
     <Resource Include="Assets\icon.ico" />
     <Resource Include="Assets\BlackKing.png" />
     <Resource Include="Assets\WhiteKing.png" />
