@@ -113,11 +113,6 @@ public partial class MainWindow : Window {
     }
 
     private void SetCursor(Player player) {
-        if(player == Player.White)
-            Cursor = ChessCursors.WhiteCursor;
-        else
-            Cursor = ChessCursors.BlackCursor;
-
-        //Cursor = player == Player.White ? ChessCursors.WhiteCursor : ChessCursors.BlackCursor;
+        Cursor = (player == Player.White ? ChessCursors.WhiteCursor : ChessCursors.BlackCursor);
     }
 }
