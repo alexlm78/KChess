@@ -59,4 +59,11 @@ public class Pawn : Piece {
     public override IEnumerable<Move> GetMoves(Position pos, Board board) {
         return ForwardMoves(pos, board).Concat(DiagonalMoves(pos, board));
     }
+
+    public override bool CanCaptureOpponentKing(Position fromPos, Board board) {
+        return DiagonalMoves(fromPos, board).Any(move => {
+            Piece piece = board[move.To];
+            return piece != null && piece.Type == PieceType.King;
+        });        
+    }
 }

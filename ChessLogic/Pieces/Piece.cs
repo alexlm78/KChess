@@ -1,4 +1,6 @@
-﻿namespace ChessLogic;
+﻿using System.Diagnostics.SymbolStore;
+
+namespace ChessLogic;
 
 public abstract class Piece {
     public abstract PieceType Type { get; }
@@ -27,5 +29,13 @@ public abstract class Piece {
 
     protected IEnumerable<Position> MovePositionsInDirs(Position from, Board board, Direction[] dirs) {
         return dirs.SelectMany(dir => MovePositionsInDir(from, board, dir));        
+    }
+
+    public virtual bool CanCaptureOpponentKing(Position fromPos, Board board) {
+        //return GetMoves(fromPos, board).Any(move => move.Capture && board[move.ToPos].Type == PieceType.King);
+        return GetMoves(fromPos, board).Any(move => {
+            Piece piece = board[move.To];
+            return piece != null && piece.Type == PieceType.King;
+        });
     }
 }
