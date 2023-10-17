@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ChessLogic; 
-internal class Result {
+public class Result {
     public Player Winner { get; }
     public EndReason Reason { get; }
 
